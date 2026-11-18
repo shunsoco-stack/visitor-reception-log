@@ -1,0 +1,163 @@
+/* タブレット・スマートフォン */
+@media (max-width: 1280px) {
+  .sidebar {
+    width: 210px;
+    padding-inline: 13px;
+  }
+  .workspace {
+    margin-left: 210px;
+  }
+  .main-content {
+    padding: 28px 24px;
+  }
+  .dashboard-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .today-aside {
+    grid-template-columns: 1fr 1fr;
+  }
+  .privacy-note {
+    grid-column: 1 / -1;
+  }
+  .page-heading {
+    align-items: flex-start;
+  }
+  .heading-actions {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+  .workspace {
+    margin-left: 0;
+    padding-bottom: 74px;
+  }
+  .topbar {
+    padding: 0 20px;
+    min-height: 64px;
+  }
+  .main-content {
+    padding: 22px 20px;
+  }
+  .mobile-demo {
+    display: block;
+    color: #9a8b6b;
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .mobile-tabs {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fffffffa;
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--line);
+    padding: 7px 4px calc(7px + env(safe-area-inset-bottom));
+    z-index: 30;
+  }
+  .mobile-tabs a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #88979d;
+    min-height: 47px;
+    font-size: 9px;
+  }
+  .mobile-tabs .active {
+    color: var(--primary);
+    font-weight: 700;
+  }
+  .stats-grid {
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 15px;
+  }
+  .footer {
+    padding: 12px 20px;
+  }
+}
+@media (max-width: 540px) {
+  .main-content {
+    padding: 20px 15px;
+  }
+  .local-label,
+  .topbar-right > .live-dot,
+  .topbar-right > .avatar {
+    display: none;
+  }
+  .bell-button {
+    margin-right: 0;
+  }
+  .page-heading {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .heading-actions {
+    margin-top: 20px;
+    flex-direction: row;
+  }
+  .heading-actions .button {
+    flex: 1;
+    padding-inline: 10px;
+  }
+  .date-line {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stat-value {
+    font-size: 32px;
+  }
+  .today-aside {
+    grid-template-columns: 1fr;
+  }
+  .arrival-banner {
+    padding: 14px 12px;
+    gap: 10px;
+  }
+  .banner-icon {
+    padding: 6px;
+  }
+  .arrival-banner p {
+    line-height: 1.8;
+  }
+  .tabs {
+    padding-inline: 10px;
+    gap: 2px;
+  }
+  .filters {
+    padding: 16px;
+    gap: 12px;
+  }
+  .filters label {
+    flex-basis: 130px;
+  }
+  .badge-row {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .badge-row .button {
+    margin-left: auto;
+  }
+  .notice-list {
+    padding: 0 16px 16px;
+  }
+  .notice-card {
+    gap: 12px;
+  }
+  .notice-symbol {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,335 @@
+﻿/* 来訪者向けフルスクリーン受付 */
+.kiosk {
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse at 90% 15%, #dceee6aa, transparent 50%),
+    radial-gradient(ellipse at 5% 80%, #e1eee9aa, transparent 40%), #f7faf8;
+  display: flex;
+  flex-direction: column;
+  color: #264c46;
+}
+.kiosk-header {
+  padding: 30px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.kiosk-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+.kiosk-brand .brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+}
+.kiosk-brand span:not(.brand-mark) {
+  display: block;
+  font-size: 10px;
+  color: #7c918b;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.kiosk-header time {
+  text-align: right;
+  color: #82938d;
+  font-size: 12px;
+}
+.kiosk-header time strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.kiosk-content {
+  width: min(100%, 820px);
+  margin: auto;
+  padding: 30px 30px 48px;
+  text-align: center;
+}
+.kiosk-content > .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-bottom: 18px;
+}
+.kiosk h1 {
+  font-size: clamp(24px, 3vw, 36px);
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  font-weight: 650;
+  margin-bottom: 14px;
+}
+.kiosk-intro {
+  color: #82968e;
+  font-size: 16px;
+  margin-bottom: 38px;
+}
+.kiosk-choices {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+  margin: auto;
+}
+.kiosk-choice {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: white;
+  border: 1px solid #dae8e1;
+  border-radius: 14px;
+  padding: 24px 28px;
+  text-align: left;
+  box-shadow: 0 4px 12px #204d3d04;
+  color: #3a6156;
+}
+.kiosk-choice strong {
+  display: block;
+  font-size: 21px;
+  letter-spacing: 0.04em;
+}
+.kiosk-choice small {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #91a29b;
+}
+.kiosk-choice > svg:last-child {
+  margin-left: auto;
+}
+.choice-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  background: #eff6f2;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+.kiosk-choice.featured {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+.kiosk-choice.featured small {
+  color: #c2ded5;
+}
+.kiosk-choice.featured .choice-icon {
+  background: #ffffff17;
+}
+.kiosk-choice:hover {
+  box-shadow: 0 5px 15px #205d3d12;
+  transform: translateY(-1px);
+}
+.kiosk-departure {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 24px;
+  margin-top: 24px;
+  min-height: 64px;
+  border-radius: 10px;
+  background: #e8f0eb;
+  color: #638174;
+  font-size: 14px;
+}
+.kiosk-help {
+  color: #8c9c95;
+  font-size: 12px;
+  margin: 28px 0 0;
+}
+.kiosk-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 18px 48px;
+  border-top: 1px solid #e2ebe5;
+  color: #9aaba2;
+  font-size: 10px;
+}
+
+/* 受付入力・検索候補 */
+.kiosk-card {
+  max-width: 600px;
+  background: white;
+  border: 1px solid #dfeae4;
+  border-radius: 18px;
+  padding: 32px;
+  margin: 28px auto 0;
+  box-shadow: 0 10px 35px #2c584405;
+  text-align: left;
+}
+.kiosk-card label {
+  font-size: 16px;
+}
+.kiosk-card input,
+.kiosk-card select {
+  min-height: 56px;
+  font-size: 18px;
+  border-radius: 9px;
+}
+.kiosk-submit {
+  width: 100%;
+  min-height: 60px;
+  font-size: 18px;
+  margin-top: 24px;
+  border-radius: 10px;
+}
+.keypad-form {
+  max-width: 340px;
+  margin: auto;
+  text-align: center;
+}
+.keypad-form .code-input {
+  font-size: 36px;
+  letter-spacing: 0.28em;
+  text-align: center;
+  min-height: 76px;
+  color: var(--primary);
+  margin: 12px 0;
+}
+.code-input::placeholder {
+  color: #c7d6cf;
+}
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.keypad button {
+  min-height: 60px;
+  border: 1px solid #dfebe4;
+  background: #f7faf8;
+  color: #3f6256;
+  font-size: 24px;
+  border-radius: 10px;
+}
+.keypad button:nth-child(10) {
+  font-size: 12px;
+}
+.keypad button:hover {
+  background: #e4f1e9;
+}
+.kiosk-back {
+  background: transparent;
+  color: #7a9488;
+  min-height: 52px;
+  margin-top: 22px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.kiosk-hint {
+  color: #8b9b93;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-top: 18px;
+}
+.candidate-list {
+  display: grid;
+  gap: 12px;
+}
+.candidate-list button {
+  padding: 18px;
+  border: 1px solid #dfeae4;
+  border-radius: 9px;
+  background: #f6faf7;
+  color: #3e6456;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 72px;
+}
+.candidate-list strong {
+  font-size: 16px;
+}
+.candidate-list small {
+  display: block;
+  margin-top: 6px;
+}
+.walkin-form {
+  display: grid;
+  gap: 20px;
+}
+.walkin-form .kiosk-submit {
+  margin-top: 4px;
+}
+.kiosk-error {
+  background: #fff1e8;
+  color: #9d5329;
+  border: 1px solid #ecd0ba;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* 確認と完了画面 */
+.confirmation,
+.completion {
+  text-align: center;
+}
+.confirmation-icon,
+.completion-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 76px;
+  height: 76px;
+  background: #e9f5ed;
+  color: #308a65;
+  margin-bottom: 22px;
+}
+.completion h2,
+.confirmation h2 {
+  font-size: 22px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.completion p,
+.confirmation p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #738b7d;
+}
+.assigned-badge {
+  background: #f1f7f3;
+  border: 1px solid #dfece3;
+  border-radius: 13px;
+  padding: 22px;
+  margin: 22px 0;
+}
+.assigned-badge span {
+  font-size: 14px;
+}
+.assigned-badge strong {
+  display: block;
+  font-size: 64px;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  line-height: 1.7;
+}
+.assigned-badge small {
+  display: block;
+}
+.confirmation .checkbox-label {
+  text-align: left;
+  line-height: 1.8;
+  margin-top: 22px;
+}
+.confirmation small {
+  display: block;
+  margin-top: 18px;
+}
+.completion .button.secondary {
+  min-height: 54px;
+  font-size: 16px;
+}
